@@ -11,21 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: { isDate: true }
     },
     description: DataTypes.STRING
-  }, {
-    timestamps: false,
-    validate: {
-      dateMixUp() {
-        if (this.startDate > this.endDate) {
-          throw new Error("End date must proceed start date.")
-        }
-      },
-      tooEarly() {
-        if (Date.parse(this.startDate) < new Date()) {
-          throw new Error("You can't schedule something that already happened.")
-        }
-      }
-    }
-  });
+  }, {});
   Event.associate = function(models) {
 
   };
