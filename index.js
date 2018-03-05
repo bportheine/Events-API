@@ -10,5 +10,5 @@ app.use(bodyParser.json())
 app.use(eventsRouter)
 
 app.listen(port, () => {
-  console.log(`Express listening on port: ${port}`)
+  console.log(`Express listening on port: 4001`)
 })

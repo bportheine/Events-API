@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       validate: { isDate: true }
     },
-    description: DataTypes.TEXT
+    description: DataTypes.STRING
   }, {
     timestamps: false,
     validate: {
